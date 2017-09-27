@@ -1,0 +1,13 @@
+{
+  "endpoint" : "http://your-dokuwiki-url/lib/exe/xmlrpc.php",
+  "cookies" : ".cookies.txt",
+  "login" : "your-dokuwiki-login",
+  "password" : "your-dokuwiki-password",
+  "dialect" : "DokuWiki",
+  "wikiuri" : "^http[s]?:\\/\\/your-dokuwiki-url\\/doku\\.php\\?id\\=([^&]+)",
+  "version" : "version.json",
+  "python" : "D:\\Program Files\\LibreOffice 5\\program\\python.exe",
+  "inencoding" : "windows-1251",
+  "outencoding" : "utf8",
+  "datafolder" : "C:\\OpenServer\\domains\\my-dokuwiki\\data"
+}
