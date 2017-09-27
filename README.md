@@ -70,8 +70,13 @@ Before using module it is necessary to create a copy of `config.json.example` fi
 - python - path to python.exe, not necessary on Linux;
 - datafolder - path to the folder containing resulting DokuWiki pages, used to calculate length of file names;
 - other lines should be left untouched.
+`version.json` is used to store versions of converted files.
 
 After creating config file simply put `convert.pl`, `config.json` and `version.json` in the same folder with documents that you wish to convert and run
 ```
 perl convert.pl
 ```
+
+# Why different convert.pl's?
+`convert_1req*` is used to make one upload request to DokuWiki API and if it fails, modules stops. Module measures length of resulting file name and trims one time to create acceptable file name. As you can guess there are two versions of module: for Linux and Windows systems.
+`convert_nreq*` does not measure file name and instead if upload to DokuWiki fails, it trims filename by one symbol and repeats request until it succeeds.
