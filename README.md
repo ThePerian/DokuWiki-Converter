@@ -77,6 +77,7 @@ After creating config file simply put `convert.pl`, `config.json` and `version.j
 perl convert.pl
 ```
 
-# Why different convert.pl's?
+## Why different convert.pl's?
 `convert_1req*` is used to make one upload request to DokuWiki API and if it fails, modules stops. Module measures length of resulting file name and trims one time to create acceptable file name. As you can guess there are two versions of module: for Linux and Windows systems.
+
 `convert_nreq*` does not measure file name and instead if upload to DokuWiki fails, it trims filename by one symbol and repeats request until it succeeds.
